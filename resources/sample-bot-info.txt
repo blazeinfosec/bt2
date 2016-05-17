@@ -1,0 +1,12 @@
+Done! Congratulations on your new bot. You will find it at
+telegram.me/blazeinfosec_bot. You can now add a description,
+about section and profile picture for your bot, see /help for a list
+of commands.
+
+Use this token to access the HTTP API:
+XXXXXXXXX:ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+
+For a description of the Bot API, see this page
+https://core.telegram.org/bots/api
+
+
