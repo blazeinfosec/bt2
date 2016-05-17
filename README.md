@@ -57,6 +57,7 @@ Information Security can be liable for any malicious use of the tool.
 
 * After launching a reverse shell and exiting from it, all commands sent to
 the bot have duplicate responses.
+* The 'kill' functionality is not working as it should.
 
 ## Author
 
