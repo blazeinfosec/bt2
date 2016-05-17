@@ -1,5 +1,4 @@
 ## bt2: Blaze Telegram Backdoor Toolkit
-=========================
 
 bt2 is a Python-based backdoor in form of a IM bot that uses the
 infrastructure and the feature-rich bot API provided by Telegram, slightly
@@ -40,7 +39,7 @@ the botmaster to avoid abuse from unauthorized parties.
 $ python bt2.py
 ```
 
-![Sample screenshot](https://raw.github.com/blazeinfosec/bt2/images/screenshot.png)
+![Sample screenshot](https://raw.githubusercontent.com/blazeinfosec/bt2/master/images/screenshot.png)
 
 ## Resources
 
