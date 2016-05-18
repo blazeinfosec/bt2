@@ -134,7 +134,6 @@ def main():
         Older versions of Telepot used notifyOnMessage, newer versions use
         the function message_loop. Uncomment it if using an older version.
         '''
-        #bot.notifyOnMessage(handle_message)
         bot.message_loop(handle_message)
         print bot.getMe()
     except Exception as err:
