@@ -58,7 +58,7 @@ Information Security can be liable for any malicious use of the tool.
 * After launching a reverse shell and exiting from it, all commands sent to
 the bot have duplicate responses.
 * The 'kill' functionality is not working as it should.
-* After successfully execution of shellcode, the bot dies. Upon return it
+* After successful execution of shellcode, the bot dies. Upon return it
 fetches the previous messages from the server and executes the shellcode
 again. Need to find a way to avoid fetching of previous messages.
 
