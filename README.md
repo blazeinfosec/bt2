@@ -39,7 +39,7 @@ the botmaster to avoid abuse from unauthorized parties.
 $ python bt2.py
 ```
 
-![Sample screenshot](https://raw.githubusercontent.com/blazeinfosec/bt2/master/images/screenshot.png)
+![Sample screenshot](https://raw.githubusercontent.com/blazeinfosec/bt2/master/images/main-screenshot.png)
 
 ## Resources
 
