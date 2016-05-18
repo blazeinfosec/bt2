@@ -29,7 +29,6 @@ Available commands are:
 /help - This help message.
 """
 
-notimplemented_message = "This command has not been implemented yet."
 uploadfunctionality_message = "Use Telegram's built-in functionality for this purpose."
 suicide_message = "Killing the backdoor..."
 
