@@ -43,8 +43,8 @@ $ python bt2.py
 
 ## Resources
 
-We will soon launch a blog post with all details about the tool, so watch
-this space.
+We published a blog post with a few more details on how command and control
+and how to use the tool: https://blog.blazeinfosec.com/bt2-leveraging-telegram-as-a-command-control-platform/
 
 ## Disclaimer
 
